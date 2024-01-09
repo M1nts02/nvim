@@ -1,6 +1,5 @@
 -- Please write your custom file, then save and restart.
 
---vim.g.github_url = "https://ghproxy.com/https://github.com/"
 --vim.g.python = "/opt/homebrew/bin/python3"
 --vim.g.light_theme = "akane-light"
 --vim.g.dark_theme = "akane-dark"

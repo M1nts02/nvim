@@ -9,7 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "--single-branch",
-    vim.g.github_url .. "folke/lazy.nvim.git",
+    "https://github.com/folke/lazy.nvim.git",
     lazypath,
   }
 end
@@ -20,9 +20,4 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
   -- Load plugins
   { import = "plugins" },
-}, {
-  git = {
-    -- Git mirror
-    url_format = vim.g.github_url .. "%s.git",
-  },
 })

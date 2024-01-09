@@ -17,9 +17,6 @@ local options = {
     },
   },
   max_concurrent_installers = 10,
-  github = {
-    download_url_template = vim.g.github_url .. "%s/releases/download/%s/%s",
-  },
 }
 
 return options

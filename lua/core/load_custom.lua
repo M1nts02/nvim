@@ -7,7 +7,6 @@ vim.g.python = "python3"
 vim.g.light_theme = "akane-light"
 vim.g.dark_theme = "akane-dark"
 vim.g.lualine_theme = "akane"
-vim.g.github_url = "https://github.com/"
 _G.lsp_servers = {}
 
 -- Get path of custom file
