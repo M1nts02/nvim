@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd("UIEnter", {
 -- Large file
 vim.api.nvim_create_autocmd("BufReadPre", {
   callback = function()
-      local filesize = vim.fn.getfsize(vim.fn.expand "%")
+    local filesize = vim.fn.getfsize(vim.fn.expand "%")
     if filesize > 50000000 then
       vim.o.syntax = false
       vim.o.number = false
