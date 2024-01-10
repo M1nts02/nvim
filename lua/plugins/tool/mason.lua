@@ -1,9 +1,6 @@
 local options = {
   PATH = "skip",
   ui = {
-    icons = {
-      package_uninstalled = "✗",
-    },
     keymaps = {
       toggle_package_expand = "<CR>",
       install_package = "i",

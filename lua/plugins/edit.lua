@@ -50,23 +50,14 @@ return {
       keys = { f = "f", F = "F", t = "t", T = "T" },
       labeled_modes = "nv",
     },
-    dependencies = {
-      "ggandor/leap.nvim",
-    },
+    dependencies = { "ggandor/leap.nvim" },
   },
 
   -- TODO
   {
     "folke/todo-comments.nvim",
-    cmd = {
-      "TodoLocList",
-      "TodoQuickFix",
-      "TodoTelescope",
-      "TodoTrouble",
-    },
-    keys = {
-      { "<Space>ft", "<CMD>TodoTelescope<CR>", desc = "Todo list" },
-    },
+    cmd = { "TodoLocList", "TodoQuickFix", "TodoTelescope", "TodoTrouble" },
+    keys = { { "<Space>ft", "<CMD>TodoTelescope<CR>", desc = "Todo list" } },
     main = "todo-comments",
     opts = {},
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -93,10 +84,7 @@ return {
   -- Undo tree
   {
     "mbbill/undotree",
-    cmd = {
-      "UndotreeToggle",
-      "UndotreeFocus",
-    },
+    cmd = { "UndotreeToggle", "UndotreeFocus" },
   },
 
   -- Highlighting for csv

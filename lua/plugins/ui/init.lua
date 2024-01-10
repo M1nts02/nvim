@@ -18,9 +18,7 @@ return {
     event = "VeryLazy",
     main = "noice",
     opts = require "plugins.ui.noice",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
+    dependencies = { "MunifTanjim/nui.nvim" },
   },
 
   -- Status column
@@ -36,9 +34,7 @@ return {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
     main = "dressing",
-    opts = {
-      input = {
-        enabled = false,
+    opts = {     input = {   enabled = false,
       },
     },
   },

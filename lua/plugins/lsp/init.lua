@@ -34,8 +34,13 @@ return {
   {
     "kevinhwang91/nvim-ufo",
     event = "LspAttach",
-    keys = require "plugins.lsp.ufo",
     main = "ufo",
+    keys = {
+      { "zR", '<CMD>lua require("ufo").openAllFolds()<CR>', desc = "Open all folds" },
+      { "zM", '<CMD>lua require("ufo").closeAllFolds()<CR>', desc = "Close all folds" },
+      { "zr", '<CMD>lua require("ufo").openFoldsExceptKinds()<CR>', desc = "Open fold" },
+      { "zm", '<CMD>lua require("ufo").closeFoldsWith()<CR>', desc = "Close fold" },
+    },
     opts = {},
     dependencies = "kevinhwang91/promise-async",
   },

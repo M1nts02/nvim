@@ -79,15 +79,9 @@ return {
   {
     "NeogitOrg/neogit",
     cmd = { "Neogit" },
-    keys = {
-      { "<Space>gn", "<CMD>Neogit<CR>", desc = "Neogit" },
-    },
+    keys = { { "<Space>gn", "<CMD>Neogit<CR>", desc = "Neogit" } },
     main = "neogit",
-    opts = {
-      integrations = {
-        diffview = true,
-      },
-    },
+    opts = { integrations = { diffview = true } },
     dependencies = {
       "nvim-lua/plenary.nvim",
       "sindrets/diffview.nvim",
@@ -104,22 +98,16 @@ return {
       { "<Space>g<Cr>", "<CMD>Gitsigns refresh<CR>", desc = "Gitsigns refresh" },
     },
     main = "gitsigns",
-    opts = {
-      signcolumn = false,
-    },
+    opts = { signcolumn = false },
   },
 
   -- File browser
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    keys = {
-      { "<Space>e", "<CMD>NvimTreeToggle<CR>", desc = "Nvim-tree" },
-    },
+    keys = { { "<Space>e", "<CMD>NvimTreeToggle<CR>", desc = "Nvim-tree" } },
     opts = require "plugins.tool.nvim-tree",
-    dependencies = {
-      "rcarriga/nvim-notify",
-    },
+    dependencies = { "rcarriga/nvim-notify" },
   },
 
   -- Terminal
@@ -135,12 +123,8 @@ return {
       direction = "float",
       close_on_exit = true,
       auto_scroll = true,
-      float_opts = {
-        border = "curved",
-      },
-      winbar = {
-        enabled = false,
-      },
+      float_opts = { border = "curved" },
+      winbar = { enabled = false },
     },
   },
 
@@ -214,8 +198,7 @@ return {
       },
       { -- Session
         "rmagatti/session-lens",
-        keys = {
-          { "<Space>fs", "<CMD>Telescope session-lens search_session<CR>", desc = "Sessions" },
+        keys = {         { "<Space>fs", "<CMD>Telescope session-lens search_session<CR>", desc = "Sessions" },
         },
         config = function()
           require("telescope").load_extension "session-lens"
