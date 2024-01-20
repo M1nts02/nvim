@@ -1,3 +1,8 @@
+local os_name = jit.os
+vim.g.is_mac = os_name:find "OSX" ~= nil
+vim.g.is_linux = os_name:find "Linux" ~= nil
+vim.g.is_windows = os_name:find "Windows" ~= nil
+
 -- Load custom.lua
 local result = require "core.load_custom"
 

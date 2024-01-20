@@ -1,5 +1,3 @@
-local utils = require "core.utils"
-
 local cmd = vim.api.nvim_command
 local opt = vim.opt
 local g = vim.g
@@ -63,4 +61,4 @@ cmd "set shortmess+=c"
 cmd "unmenu PopUp"
 
 -- Add env for mason
-vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (utils.is_windows and ";" or ":") .. vim.env.PATH
+vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (vim.g.is_windows and ";" or ":") .. vim.env.PATH

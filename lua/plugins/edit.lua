@@ -15,7 +15,7 @@ return {
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    enabled = not utils.is_windows,
+    enabled = not vim.g.is_windows,
     event = { "BufRead", "BufNewFile" },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",

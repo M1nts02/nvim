@@ -180,7 +180,7 @@ return {
       "nvim-lua/plenary.nvim",
       { -- Telescope.nvim Support fzf
         "nvim-telescope/telescope-fzf-native.nvim",
-        enabled = not utils.is_windows,
+        enabled = not vim.g.is_windows,
         build = "make",
         opts = {
           extensions = {

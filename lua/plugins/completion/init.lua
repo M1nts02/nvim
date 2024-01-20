@@ -29,7 +29,7 @@ return {
       {-- Snippet
         "L3MON4D3/LuaSnip",
         event = { "InsertEnter", "LspAttach" },
-        build = (not utils.is_windows) and "make install_jsregexp" or nil,
+        build = (not vim.g.is_windows) and "make install_jsregexp" or nil,
         config = function()
           require("luasnip.loaders.from_vscode").load()
         end,
