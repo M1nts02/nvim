@@ -1,6 +1,4 @@
-local set_map = require("core.utils").set_map
-
-set_map {
+local map = {
   -- Move
   { { "i", "c" }, "<M-0>", "<Home>" },
   { { "i", "c" }, "<M-4>", "<End>" },
@@ -56,3 +54,10 @@ set_map {
     { desc = "Hover", noremap = true },
   },
 }
+
+for _, m in ipairs(map) do
+  if m[4] == nil then
+    m[4] = { noremap = true }
+  end
+  vim.keymap.set(m[1], m[2], m[3], m[4])
+end
