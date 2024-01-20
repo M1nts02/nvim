@@ -1,9 +1,6 @@
 -- Please write your custom file, then save and restart.
 
 --vim.g.python = "/opt/homebrew/bin/python3"
---vim.g.light_theme = "akane-light"
---vim.g.dark_theme = "akane-dark"
---vim.g.lualine_theme = "akane"
 --vim.o.shell = "/opt/homebrew/bin/nu"
 
 --vim.g.lldb = "/opt/homebrew/opt/llvm/bin/lldb-vscode"

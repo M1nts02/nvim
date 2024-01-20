@@ -4,9 +4,6 @@ local config = vim.fn.stdpath "config"
 
 -- default global value
 vim.g.python = "python3"
-vim.g.light_theme = "akane-light"
-vim.g.dark_theme = "akane-dark"
-vim.g.lualine_theme = "akane"
 _G.lsp_servers = {}
 
 -- Get path of custom file

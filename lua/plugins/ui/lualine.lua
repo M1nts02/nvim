@@ -29,14 +29,14 @@ end
 -- get tab id
 local get_tab_id = function()
   local id = vim.fn.tabpagenr()
-  local count = vim.fn.tabpagenr("$")
+  local count = vim.fn.tabpagenr "$"
   return "TAB." .. id .. "/" .. count
 end
 
 return {
   options = {
     icons_enabled = true,
-    theme = vim.g.lualine_theme,
+    theme = "akane",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
