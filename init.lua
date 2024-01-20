@@ -11,7 +11,6 @@ require "core.bootstrap"
 -- Lazy-load
 vim.api.nvim_create_autocmd("UIEnter", {
   callback = function()
-    require("core.toggle_theme").init()
     require "core.mapping"
   end,
 })

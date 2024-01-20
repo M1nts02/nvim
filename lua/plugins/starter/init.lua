@@ -6,6 +6,20 @@ return {
   -- Theme
   { "M1nts02/akane.nvim", lazy = false },
 
+  -- Toggle theme
+  {
+    "M1nts02/toggle-theme.nvim",
+    event = "VeryLazy",
+    opts = {
+      light_mode = function()
+        vim.cmd "colorscheme akane-light"
+      end,
+      dark_mode = function()
+        vim.cmd "colorscheme akane-dark"
+      end,
+    },
+  },
+
   -- Dashboard
   {
     "nvimdev/dashboard-nvim",

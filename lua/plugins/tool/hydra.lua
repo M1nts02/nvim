@@ -120,8 +120,7 @@ M.options = {
           end
         end,
         ["get_dark_mode"] = function()
-          local theme = require "core.toggle_theme"
-          local dark_mode = theme.get_dark_mode()
+          local dark_mode = require("toggle-theme").get_dark_mode()
           if dark_mode then
             return "[x]"
           else
