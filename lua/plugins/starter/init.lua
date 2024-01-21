@@ -9,7 +9,7 @@ return {
   -- Toggle theme
   {
     "M1nts02/toggle-theme.nvim",
-    event = "VeryLazy",
+    event = "UIEnter",
     opts = {
       light_mode = function()
         vim.cmd "colorscheme akane-light"
