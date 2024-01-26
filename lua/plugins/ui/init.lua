@@ -3,7 +3,7 @@ return {
   -- Status line
   {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
+    event = { "BufRead", "BufNewFile" },
     main = "lualine",
     opts = require "plugins.ui.lualine",
     dependencies = {
@@ -34,8 +34,9 @@ return {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
     main = "dressing",
-    opts = {     input = {   enabled = false,
-      },
-    },
+    opts = { input = { enabled = false } },
   },
+
+  -- Previewe for quick window
+  { "kevinhwang91/nvim-bqf", event = "QuickFixCmdPre" },
 }
