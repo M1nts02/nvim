@@ -3,9 +3,6 @@ return {
   -- Plugins manager
   { "folke/lazy.nvim", version = "*" },
 
-  -- Theme
-  { "M1nts02/akane.nvim", lazy = false },
-
   -- Toggle theme
   {
     "M1nts02/toggle-theme.nvim",
@@ -18,6 +15,7 @@ return {
         vim.cmd "colorscheme akane-dark"
       end,
     },
+    dependencies = { { "M1nts02/akane.nvim" } },
   },
 
   -- Dashboard

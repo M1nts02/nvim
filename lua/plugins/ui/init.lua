@@ -3,7 +3,7 @@ return {
   -- Status line
   {
     "nvim-lualine/lualine.nvim",
-    event = { "BufRead", "BufNewFile" },
+    event = { "VeryLazy" },
     main = "lualine",
     opts = require "plugins.ui.lualine",
     dependencies = {
