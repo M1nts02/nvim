@@ -198,8 +198,7 @@ return {
       },
       { -- Session
         "rmagatti/session-lens",
-        keys = {         { "<Space>fs", "<CMD>Telescope session-lens search_session<CR>", desc = "Sessions" },
-        },
+        keys = { { "<Space>fs", "<CMD>Telescope session-lens search_session<CR>", desc = "Sessions" } },
         config = function()
           require("telescope").load_extension "session-lens"
         end,
