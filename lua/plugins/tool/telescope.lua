@@ -4,7 +4,6 @@ M.keys = {
   { "<Space>f<CR>", "<CMD>Telescope<CR>", desc = "Telescope" },
   { "<Space>ff", "<CMD>Telescope find_files<CR>", desc = "File" },
   { "<Space>fb", "<CMD>Telescope buffers<CR>", desc = "Buffer" },
-  { "<Space>fg", "<CMD>Telescope live_grep<CR>", desc = "Grep" },
   { "<Space>fh", "<CMD>Telescope help_tags<CR>", desc = "Help" },
   { "<Space>fo", "<CMD>Telescope oldfiles<CR>", desc = "Oldfile" },
   { "<Space>fm", "<CMD>Telescope marks<CR>", desc = "Marks" },
