@@ -36,7 +36,7 @@ end
 -- Load lazy.nvim
 vim.opt.runtimepath:prepend(lazypath)
 
-require("lazy").setup {
+require("lazy").setup({
 
   -- Plugins manager
   { "folke/lazy.nvim", version = "*" },
@@ -72,4 +72,8 @@ require("lazy").setup {
       end
     end,
   },
-}
+}, {
+  ui = {
+    border = "rounded",
+  },
+})
