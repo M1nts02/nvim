@@ -61,7 +61,8 @@ cmp.setup {
       border = "rounded",
     },
     documentation = {
-      winhighlight = "Normal:PmenuSel,FloatBorder:Pmenu,Search:None",
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      border = "rounded",
       scrollbar = false,
     },
   },
