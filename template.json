@@ -8,8 +8,8 @@
     "template": "launch_lldb.json"
   },
   "task(cmake)": {
-    "target": ".vscode/task.json",
-    "template": "task_cmake.json"
+    "target": ".vscode/tasks.json",
+    "template": "tasks_cmake.json"
   },
   "stylua": {
     "target": "stylua.toml",
