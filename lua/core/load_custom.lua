@@ -4,6 +4,7 @@ local config = vim.fn.stdpath "config"
 
 -- default global value
 vim.g.python = "python3"
+vim.g.transparent = false
 _G.lsp_servers = {}
 
 -- Get path of custom file

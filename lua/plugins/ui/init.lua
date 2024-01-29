@@ -30,7 +30,7 @@ return {
             vim.cmd "colorscheme akane-dark"
           end,
         },
-        dependencies = { { "M1nts02/akane.nvim" } },
+        dependencies = { { "M1nts02/akane.nvim", opts = { transparent = vim.g.transparent } } },
       },
     },
   },

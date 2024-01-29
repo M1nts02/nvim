@@ -1,9 +1,9 @@
 -- Please write your custom file, then save and restart.
 
+--vim.g.transparent = true
 --vim.g.python = "/opt/homebrew/bin/python3"
---vim.o.shell = "/opt/homebrew/bin/nu"
-
 --vim.g.lldb = "/opt/homebrew/opt/llvm/bin/lldb-vscode"
+--vim.o.shell = "/opt/homebrew/bin/nu"
 
 lsp_servers = {
   "bashls",
