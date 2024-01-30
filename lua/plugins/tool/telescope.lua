@@ -9,7 +9,6 @@ M.keys = {
   { "<Space>fm", "<CMD>Telescope marks<CR>", desc = "Marks" },
   { "<Space>fc", "<CMD>Telescope commands<CR>", desc = "Command" },
   { "<Space>/", "<CMD>Telescope current_buffer_fuzzy_find<CR>", desc = "Line" },
-  { "<Space>ls", "<CMD>Telescope lsp_document_symbols<CR>", desc = "Symbol" },
   { "<Space>lS", "<CMD>Telescope lsp_workspace_symbols<CR>", desc = "Symbol Workspace" },
   { "z=", "<CMD>Telescope spell_suggest<CR>", desc = "spell suggest" },
   { "<M-x>", "<CMD>Telescope commands<CR>" },

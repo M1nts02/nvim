@@ -44,4 +44,25 @@ return {
     opts = {},
     dependencies = "kevinhwang91/promise-async",
   },
+
+  -- Document symbols
+  {
+    "stevearc/aerial.nvim",
+    keys = {  { "<Space>ls", "<CMD>AerialToggle<CR>", desc = "Symbol" }},
+    opts = {
+      backends = { "markdown", "lsp", "man" },
+      layout = {
+        max_width = 0.7,
+        min_width = 0.7,
+        default_direction = "float",
+        placement = "edge",
+      },
+      float = {
+        relative = "editor",
+        max_height = 0.7,
+        min_height = 0.7,
+      },
+    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 }
