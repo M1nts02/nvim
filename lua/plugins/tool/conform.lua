@@ -1,9 +1,12 @@
 -- Format
 local opts = {
   formatters_by_ft = {
+    c = { "clang_format" },
+    cpp = { "clang_format" },
     lua = { "stylua" },
     rust = { "rustfmt" },
     json = { "jq" },
+    zig = { "zigfmt" },
   },
 }
 
