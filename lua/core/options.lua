@@ -56,6 +56,7 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 g.mapleader = "\\"
 g.python3_host_prog = vim.g.python
+g.zig_fmt_autosave = false
 
 cmd "set shortmess+=c"
 cmd "unmenu PopUp"
