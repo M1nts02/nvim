@@ -23,6 +23,7 @@ return {
       {
         "M1nts02/toggle-theme.nvim",
         opts = {
+          following_system = vim.g.following_system,
           light_mode = function()
             vim.cmd "colorscheme akane-light"
           end,
