@@ -57,23 +57,20 @@ require("lazy").setup({
       require "core.mapping"
     end,
   },
-
-  -- Large file
-  {
-    name = "large-file",
-    dir = confpath,
-    event = "BufReadPre",
-    config = function()
-      local filesize = vim.fn.getfsize(vim.fn.expand "%")
-      if filesize > 50000000 then
-        vim.o.syntax = false
-        vim.o.number = false
-        vim.o.relativenumber = false
-      end
-    end,
-  },
 }, {
   ui = {
     border = "rounded",
   },
+})
+
+-- Large file
+vim.api.nvim_create_autocmd("BufReadPre", {
+  callback = function()
+    local filesize = vim.fn.getfsize(vim.fn.expand "%")
+    if filesize > 50000000 then
+      vim.o.syntax = false
+      vim.o.number = false
+      vim.o.relativenumber = false
+    end
+  end,
 })
