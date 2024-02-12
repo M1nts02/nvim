@@ -16,30 +16,20 @@ M.keys = {
 
 M.options = {
   defaults = {
-    vimgrep_arguments = {
-      "rg",
-      "-L",
-      "--color=never",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-      "--smart-case",
-    },
     prompt_prefix = "   ",
     default = { COLORTERM = "truecolor" },
     file_ignore_patterns = { "./.git/*" },
-    preview = true,
+    preview = false,
     sorting_strategy = "ascending",
     layout_strategy = "horizontal",
     layout_config = {
-      height = 0.8,
+      height = 0.6,
       preview_cutoff = 120,
       horizontal = {
         height = 0.8,
         preview_width = 0.45,
         prompt_position = "top",
-        width = 0.8,
+        width = 0.6,
       },
     },
   },
