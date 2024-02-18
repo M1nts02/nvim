@@ -50,6 +50,8 @@ M.options = {
 
     _t_ %{get_dark_mode} Dark mode
 
+    _L_ %{get_status_line} Status line
+
     ^
          ^^^^                _<Esc>_
                                                            ]],
@@ -127,6 +129,13 @@ M.options = {
             return "[ ]"
           end
         end,
+        ["get_status_line"] = function()
+          if vim.o.laststatus ~= 0 then
+            return "[x]"
+          else
+            return "[ ]"
+          end
+        end,
       },
     },
   },
@@ -195,6 +204,14 @@ M.options = {
         vim.cmd "ToggleTheme"
       end,
       { desc = "Toggle dark mode" },
+    },
+    {
+      "L",
+      function()
+        local ls = vim.o.laststatus
+        vim.o.laststatus = ls == 0 and 3 or 0
+      end,
+      { desc = "Toggle status line" },
     },
   },
 }
