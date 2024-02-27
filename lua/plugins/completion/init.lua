@@ -7,10 +7,6 @@ return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     cmd = { "CmpToggle", "CmpRgToggle" },
-    keys = {
-      { ":", mode = { "n", "v" } },
-      { "/", mode = { "n", "v" } },
-    },
     init = function()
       vim.g.cmp_toggle = true
     end,
@@ -24,8 +20,6 @@ return {
       "onsails/lspkind-nvim", -- Add icons
       "saadparwaiz1/cmp_luasnip", -- Support luasnip
       "lukas-reineke/cmp-rg", -- Ripgrep
-      "hrsh7th/cmp-cmdline", -- Cmd line
-      "hrsh7th/cmp-buffer", -- buffer
       {-- Snippet
         "L3MON4D3/LuaSnip",
         event = { "InsertEnter", "LspAttach" },
