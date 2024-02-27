@@ -5,7 +5,7 @@ return {
   -- Template
   {
     "M1nts02/nvim-template",
-    cmd = {"Templ", "TemplAdd", "TemplDel"},
+    cmd = { "Templ", "TemplAdd", "TemplDel" },
     opts = {
       templ_dir = path_join(vim.fn.stdpath "config", "template"),
       templ_register_file = path_join(vim.fn.stdpath "config", "template.json"),
@@ -85,12 +85,5 @@ return {
   {
     "mbbill/undotree",
     cmd = { "UndotreeToggle", "UndotreeFocus" },
-  },
-
-  -- Highlighting for csv
-  {
-    "cameron-wags/rainbow_csv.nvim",
-    config = true,
-    ft = { "csv" },
   },
 }
