@@ -5,7 +5,7 @@ return {
   -- Template
   {
     "M1nts02/nvim-template",
-    cmd = "Templ",
+    cmd = {"Templ", "TemplAdd", "TemplDel"},
     opts = {
       templ_dir = path_join(vim.fn.stdpath "config", "template"),
       templ_register_file = path_join(vim.fn.stdpath "config", "template.json"),
