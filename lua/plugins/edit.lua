@@ -93,12 +93,4 @@ return {
     config = true,
     ft = { "csv" },
   },
-
-  -- Crates
-  {
-    "Saecki/crates.nvim",
-    event = { "BufRead Cargo.toml", "LspAttach" },
-    main = "crates",
-    opts = {},
-  },
 }
