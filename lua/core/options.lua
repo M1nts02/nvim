@@ -48,6 +48,7 @@ opt.cursorcolumn = true
 opt.termguicolors = true
 opt.tabstop = 2
 opt.shiftwidth = 2
+opt.shortmess:append { c = true }
 opt.softtabstop = -1
 opt.whichwrap:append "<>[]hl"
 opt.fillchars = { eob = " " }
@@ -58,7 +59,6 @@ g.mapleader = "\\"
 g.python3_host_prog = vim.g.python
 g.zig_fmt_autosave = false
 
-cmd "set shortmess+=c"
 cmd "unmenu PopUp"
 
 -- Add env for mason
