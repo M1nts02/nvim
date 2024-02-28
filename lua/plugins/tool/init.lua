@@ -73,6 +73,7 @@ return {
       { "<Space>pc", "<CMD>CccHighlighterToggle<CR>", desc = "Colors Highlighting" },
       { "<Space>pp", "<CMD>CccPick<CR>", desc = "Colors Pick" },
     },
+    opts = {},
   },
 
   -- Neogit
