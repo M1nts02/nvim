@@ -15,7 +15,7 @@ local function custom_on_attach(bufnr)
   vim.keymap.set("n", "<Space>", api.marks.toggle, opts "Toggle Bookmark")
 end
 
-return {
+local options = {
   on_attach = custom_on_attach,
   git = {
     enable = true,
@@ -63,4 +63,12 @@ return {
       return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
     end,
   },
+}
+
+-- File browser
+return {
+  "nvim-tree/nvim-tree.lua",
+  cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+  keys = { { "<Space>e", "<CMD>NvimTreeToggle<CR>", desc = "Nvim-tree" } },
+  opts = options,
 }

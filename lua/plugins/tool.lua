@@ -1,13 +1,4 @@
 return {
-  -- Code format
-  {
-    "stevearc/conform.nvim",
-    event = { "BufRead", "BufNewFile" },
-    config = function()
-      require "plugins.tool.conform"
-    end,
-  },
-
   -- Buffer manager
   {
     "j-morano/buffer_manager.nvim",
@@ -67,14 +58,6 @@ return {
     opts = { signcolumn = false },
   },
 
-  -- File browser
-  {
-    "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    keys = { { "<Space>e", "<CMD>NvimTreeToggle<CR>", desc = "Nvim-tree" } },
-    opts = require "plugins.tool.nvim-tree",
-  },
-
   -- Terminal
   {
     "akinsho/toggleterm.nvim",
@@ -116,83 +99,6 @@ return {
       mru_sort = true,
       notify_info = true,
       hooks = {},
-    },
-  },
-
-  -- Install tool
-  {
-    "williamboman/mason.nvim",
-    cmd = {
-      "Mason",
-      "MasonInstall",
-      "MasonLog",
-      "MasonUninstall",
-      "MasonUninstallAll",
-      "MasonUpdate",
-    },
-    main = "mason",
-    opts = require "plugins.tool.mason",
-  },
-
-  -- Search
-  {
-    "nvim-telescope/telescope.nvim",
-    cmd = { "Telescope" },
-    keys = require("plugins.tool.telescope").keys,
-    main = "telescope",
-    opts = require("plugins.tool.telescope").options,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      { -- Telescope.nvim Support fzf
-        "nvim-telescope/telescope-fzf-native.nvim",
-        enabled = not vim.g.is_windows,
-        build = "make",
-        opts = {
-          extensions = {
-            fzf = {
-              fuzzy = true,
-              override_generic_sorter = true,
-              override_file_sorter = true,
-              case_mode = "smart_case",
-            },
-          },
-        },
-        config = function()
-          require("telescope").load_extension "fzf"
-        end,
-      },
-      { -- Session
-        "rmagatti/session-lens",
-        keys = { { "<Space>fs", "<CMD>Telescope session-lens search_session<CR>", desc = "Sessions" } },
-        config = function()
-          require("telescope").load_extension "session-lens"
-        end,
-        dependencies = {
-          {
-            "rmagatti/auto-session",
-            main = "auto-session",
-            opts = {},
-          },
-        },
-      },
-    },
-    config = function(_, opts)
-      require("telescope").setup(opts)
-    end,
-  },
-
-  -- Which key
-  {
-    "folke/which-key.nvim",
-    keys = require("plugins.tool.which-key").keys,
-    config = require("plugins.tool.which-key").config,
-    dependencies = {
-      { -- Hydra
-        "anuvyklack/hydra.nvim",
-        config = function()
-          require "plugins.tool.hydra"
-        end,
-      },
     },
   },
 }

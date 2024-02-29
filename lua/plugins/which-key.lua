@@ -1,6 +1,4 @@
-local M = {}
-
-M.keys = { "c", "d", "g", "v", "y", "z", "<Space>", "\\" }
+local keys = { "c", "d", "g", "v", "y", "z", "<Space>", "\\" }
 
 local options = {
   icons = {
@@ -66,9 +64,11 @@ local rg = {
   ["<Space>p"] = { name = "Preview+" },
 }
 
-M.config = function()
-  require("which-key").setup(options)
-  require("which-key").register(rg)
-end
-
-return M
+return {
+  "folke/which-key.nvim",
+  keys = keys,
+  config = function()
+    require("which-key").setup(options)
+    require("which-key").register(rg)
+  end,
+}

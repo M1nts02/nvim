@@ -1,6 +1,5 @@
 -- Debug
 return {
-
   -- GDB for neovim
   {
     "sakhnik/nvim-gdb",

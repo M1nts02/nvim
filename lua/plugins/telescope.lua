@@ -1,6 +1,4 @@
-local M = {}
-
-M.keys = {
+local keys = {
   { "<Space>f<CR>", "<CMD>Telescope<CR>", desc = "Telescope" },
   { "<Space>ff", "<CMD>Telescope find_files<CR>", desc = "File" },
   { "<Space>fb", "<CMD>Telescope buffers<CR>", desc = "Buffer" },
@@ -14,7 +12,7 @@ M.keys = {
   { "<M-x>", "<CMD>Telescope commands<CR>" },
 }
 
-M.options = {
+local options = {
   defaults = {
     prompt_prefix = "   ",
     default = { COLORTERM = "truecolor" },
@@ -35,4 +33,30 @@ M.options = {
   },
 }
 
-return M
+return {
+  "nvim-telescope/telescope.nvim",
+  cmd = { "Telescope" },
+  keys = keys,
+  main = "telescope",
+  opts = options,
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { -- Session
+      "rmagatti/session-lens",
+      keys = { { "<Space>fs", "<CMD>Telescope session-lens search_session<CR>", desc = "Sessions" } },
+      config = function()
+        require("telescope").load_extension "session-lens"
+      end,
+      dependencies = {
+        {
+          "rmagatti/auto-session",
+          main = "auto-session",
+          opts = {},
+        },
+      },
+    },
+  },
+  config = function(_, opts)
+    require("telescope").setup(opts)
+  end,
+}

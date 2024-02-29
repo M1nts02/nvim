@@ -1,5 +1,4 @@
 local M = {}
-local Hydra = require "hydra"
 
 -- DAP
 M.debug = {
@@ -216,6 +215,13 @@ M.options = {
   },
 }
 
-for _, v in pairs(M) do
-  Hydra(v)
-end
+return {
+  "anuvyklack/hydra.nvim",
+  keys = { "<Space>", "\\" },
+  config = function()
+    for _, v in pairs(M) do
+      local Hydra = require "hydra"
+      Hydra(v)
+    end
+  end,
+}

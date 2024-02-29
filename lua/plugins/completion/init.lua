@@ -1,5 +1,4 @@
 return {
-
   -- Completion
   {
     "hrsh7th/nvim-cmp",
