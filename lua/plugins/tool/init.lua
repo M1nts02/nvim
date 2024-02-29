@@ -73,7 +73,6 @@ return {
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     keys = { { "<Space>e", "<CMD>NvimTreeToggle<CR>", desc = "Nvim-tree" } },
     opts = require "plugins.tool.nvim-tree",
-    dependencies = { "rcarriga/nvim-notify" },
   },
 
   -- Terminal
