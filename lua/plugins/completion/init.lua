@@ -1,5 +1,3 @@
-local utils = require "core.utils"
-
 return {
 
   -- Completion
@@ -20,7 +18,7 @@ return {
       "onsails/lspkind-nvim", -- Add icons
       "saadparwaiz1/cmp_luasnip", -- Support luasnip
       "lukas-reineke/cmp-rg", -- Ripgrep
-      {-- Snippet
+      { -- Snippet
         "L3MON4D3/LuaSnip",
         event = { "InsertEnter", "LspAttach" },
         build = (not vim.g.is_windows) and "make install_jsregexp" or nil,
