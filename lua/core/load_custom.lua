@@ -3,7 +3,6 @@ local path_join = utils.path_join
 local config = vim.fn.stdpath "config"
 
 -- default global value
-vim.g.python = "python3"
 vim.g.transparent = false
 vim.g.following_system = false
 _G.lsp_servers = {}
@@ -14,7 +13,7 @@ local template_path = path_join(config, "template", "custom_default.lua")
 
 -- Command for open custom file
 vim.api.nvim_create_user_command("CustomOpen", function()
-  vim.cmd ("e " .. custom_path)
+  vim.cmd("e " .. custom_path)
 end, {
   desc = "Open custom file",
 })

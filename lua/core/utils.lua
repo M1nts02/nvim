@@ -17,14 +17,4 @@ M.copy_file = function(oldPath, newPath)
   newIcon:close()
 end
 
--- get lldb path
-M.get_lldb_path = function()
-  if vim.g.lldb ~= nil then
-    if vim.fn.executable(vim.g.lldb) == 1 then
-      return vim.g.lldb
-    end
-  end
-  return "codelldb"
-end
-
 return M

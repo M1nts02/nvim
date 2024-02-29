@@ -1,5 +1,4 @@
 local dap = require "dap"
-local utils = require "core.utils"
 
 -- configurations
 local configurations = {
@@ -47,7 +46,7 @@ local adapters = {
     name = "lldb",
     port = "${port}",
     executable = {
-      command = utils.get_lldb_path(),
+      command = vim.fn.executable "codelldb" == 1 and "codelldb" or "lldb-vscode",
       args = { "--port", "${port}" },
     },
   },
