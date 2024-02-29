@@ -2,10 +2,10 @@
 
 -- vim.g.transparent = true
 -- vim.g.following_system = true
--- vim.g.python = "/opt/homebrew/bin/python3"
--- vim.g.lldb = "/opt/homebrew/opt/llvm/bin/lldb-vscode"
+-- vim.g.python3_host_prog = "python3"
 
 -- vim.o.shell = "/opt/homebrew/bin/nu"
+
 -- use nushell on windows
 -- vim.api.nvim_command "let &shell = 'nu'"
 -- vim.api.nvim_command "let &shellcmdflag = '-c'"
