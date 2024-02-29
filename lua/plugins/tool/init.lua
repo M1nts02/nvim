@@ -37,28 +37,6 @@ return {
     opts = {},
   },
 
-  -- Task system
-  {
-    "stevearc/overseer.nvim",
-    cmd = {
-      "OverseerBuild",
-      "OverseerClearCache",
-      "OverseerClose",
-      "OverseerDeleteBundle",
-      "OverseerInfo",
-      "OverseerLoadBundle",
-      "OverseerOpen",
-      "OverseerQuickAction",
-      "OverseerRun",
-      "OverseerRunCmd",
-      "OverseerSaveBundle",
-      "OverseerTaskAction",
-      "OverseerToggle",
-    },
-    main = "overseer",
-    opts = {},
-  },
-
   -- Colors highlighting
   {
     "uga-rosa/ccc.nvim",
