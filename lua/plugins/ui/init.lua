@@ -1,5 +1,4 @@
 return {
-
   -- Dashboard
   {
     "nvimdev/dashboard-nvim",
@@ -18,9 +17,7 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
       "WhoIsSethDaniel/lualine-lsp-progress.nvim",
-
-      -- Toggle theme
-      {
+      { -- Toggle theme
         "M1nts02/toggle-theme.nvim",
         opts = {
           following_system = vim.g.following_system,
