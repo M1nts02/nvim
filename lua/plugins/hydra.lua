@@ -216,6 +216,8 @@ M.options = {
 }
 
 return {
+  "folke/which-key.nvim",
+  dependencies = {
   "anuvyklack/hydra.nvim",
   keys = { "<Space>", "\\" },
   config = function()
@@ -224,4 +226,5 @@ return {
       Hydra(v)
     end
   end,
+}
 }
