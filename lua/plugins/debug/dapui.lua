@@ -5,15 +5,6 @@ local dapui = require "dapui"
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()
 end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
-end
-dap.listeners.before.disconnect["dapui_config"] = function()
-  dapui.close()
-end
 
 require("dapui").setup {
   layouts = {
@@ -37,3 +28,18 @@ require("dapui").setup {
     },
   },
 }
+
+-- Open dapui
+vim.api.nvim_create_user_command("DapOpen", function()
+  dapui.open()
+end, {
+  desc = "Open dapui",
+})
+
+-- Stop dap
+vim.api.nvim_create_user_command("DapClose", function()
+  vim.api.nvim_command "DapTerminate"
+  dapui.close()
+end, {
+  desc = "Close dap and dapui",
+})

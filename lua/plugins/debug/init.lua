@@ -28,6 +28,8 @@ return {
       "DapTerminate",
       "DapToggleBreakpoint",
       "DapToggleRepl",
+      "DapOpen",
+      "DapClose",
     },
     config = function()
       require "plugins.debug.dap"
