@@ -59,6 +59,7 @@ g.mapleader = "\\"
 g.zig_fmt_autosave = false
 
 cmd "unmenu PopUp"
+cmd "filetype indent off"
 
 -- Add env for mason
 vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (vim.g.is_windows and ";" or ":") .. vim.env.PATH
