@@ -8,15 +8,9 @@ return {
     dependencies = { { "nvim-tree/nvim-web-devicons" } },
   },
 
-  -- Status line
   {
     "nvim-lualine/lualine.nvim",
-    event = { "VeryLazy" },
-    main = "lualine",
-    opts = require "plugins.starter.lualine",
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "WhoIsSethDaniel/lualine-lsp-progress.nvim",
       { -- Toggle theme
         "M1nts02/toggle-theme.nvim",
         opts = {
