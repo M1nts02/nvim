@@ -1,17 +1,5 @@
 -- Debug
 return {
-  -- GDB for neovim
-  {
-    "sakhnik/nvim-gdb",
-    cmd = {
-      "GdbStart",
-      "GdbStartBashDB",
-      "GdbStartLLDB",
-      "GdbStartPDB",
-      "GdbStartRR",
-    },
-  },
-
   -- DAP
   {
     "mfussenegger/nvim-dap",
