@@ -48,12 +48,6 @@ return {
         key = "w",
       },
       {
-        desc = "Session",
-        desc_hl = "Function",
-        action = "Telescope session-lens search_session",
-        key = "s",
-      },
-      {
         desc = "Configuration",
         desc_hl = "SpecialKey",
         action = "CustomOpen",

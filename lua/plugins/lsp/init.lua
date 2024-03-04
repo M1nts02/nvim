@@ -45,15 +45,10 @@ return {
     opts = {
       backends = { "markdown", "lsp", "man" },
       layout = {
-        max_width = 0.7,
-        min_width = 0.7,
-        default_direction = "float",
+        max_width = 0.3,
+        min_width = 0.2,
+        default_direction = "right",
         placement = "edge",
-      },
-      float = {
-        relative = "editor",
-        max_height = 0.7,
-        min_height = 0.7,
       },
     },
     dependencies = { "nvim-tree/nvim-web-devicons" },
