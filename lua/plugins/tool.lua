@@ -1,35 +1,20 @@
 return {
-  -- Buffer manager
+  -- Terminal
   {
-    "j-morano/buffer_manager.nvim",
-    keys = {
-      {
-        "<Space>b",
-        function()
-          require("buffer_manager.ui").toggle_quick_menu()
-        end,
-        desc = "Buffer manager",
-      },
+    "akinsho/toggleterm.nvim",
+    keys = { [[<C-\>]] },
+    main = "toggleterm",
+    opts = {
+      open_mapping = [[<c-\>]],
+      hide_numbers = true,
+      autochdir = false,
+      start_in_insert = true,
+      direction = "float",
+      close_on_exit = true,
+      auto_scroll = true,
+      float_opts = { border = "curved" },
+      winbar = { enabled = false },
     },
-    main = "buffer_manager",
-    opts = {},
-  },
-
-  -- Colors highlighting
-  {
-    "uga-rosa/ccc.nvim",
-    cmd = {
-      "CccConvert",
-      "CccHighlighterDisable",
-      "CccHighlighterEnablee",
-      "CccHighlighterToggle",
-      "CccPick",
-    },
-    keys = {
-      { "<Space>pc", "<CMD>CccHighlighterToggle<CR>", desc = "Colors Highlighting" },
-      { "<Space>pp", "<CMD>CccPick<CR>", desc = "Colors Pick" },
-    },
-    opts = {},
   },
 
   -- Neogit
@@ -58,22 +43,20 @@ return {
     opts = { signcolumn = false },
   },
 
-  -- Terminal
+  -- Buffer manager
   {
-    "akinsho/toggleterm.nvim",
-    keys = { [[<C-\>]] },
-    main = "toggleterm",
-    opts = {
-      open_mapping = [[<c-\>]],
-      hide_numbers = true,
-      autochdir = false,
-      start_in_insert = true,
-      direction = "float",
-      close_on_exit = true,
-      auto_scroll = true,
-      float_opts = { border = "curved" },
-      winbar = { enabled = false },
+    "j-morano/buffer_manager.nvim",
+    keys = {
+      {
+        "<Space>b",
+        function()
+          require("buffer_manager.ui").toggle_quick_menu()
+        end,
+        desc = "Buffer manager",
+      },
     },
+    main = "buffer_manager",
+    opts = {},
   },
 
   -- Workspace manager
