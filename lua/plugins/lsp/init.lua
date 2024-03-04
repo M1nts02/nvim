@@ -7,12 +7,6 @@ return {
       require "plugins.lsp.lspconfig"
       require "plugins.lsp.command"
     end,
-    dependencies = {
-      {
-        "folke/neodev.nvim",
-        opts = {},
-      },
-    },
   },
 
   -- Winbar like vscode
@@ -47,7 +41,7 @@ return {
   -- Document symbols
   {
     "stevearc/aerial.nvim",
-    keys = {  { "<Space>ls", "<CMD>AerialToggle<CR>", desc = "Symbol" }},
+    keys = { { "<Space>ls", "<CMD>AerialToggle<CR>", desc = "Symbol" } },
     opts = {
       backends = { "markdown", "lsp", "man" },
       layout = {
