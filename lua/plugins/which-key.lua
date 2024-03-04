@@ -53,8 +53,15 @@ local rg = {
   ["<Space>g"] = { name = "Git+" },
 
   -- LSP
+  ["gd"] = { "<CMD>lua vim.lsp.buf.definition()<CR>", "Definition" },
   ["<Space>l"] = {
     name = "LSP+",
+    ["r"] = { "<CMD>lua vim.lsp.buf.references()<CR>", "References" },
+    ["e"] = { "<CMD>lua vim.diagnostic.setloclist()<CR>", "Diagnostics" },
+    ["E"] = { "<CMD>lua vim.diagnostic.setqflist()<CR>", "Workspace Diagnostics" },
+    ["a"] = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
+    ["c"] = { "<CMD>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
+    ["g"] = { "<CMD>lua vim.lsp.buf.outgoing_calls()<CR>", "Outgoing Calls" },
   },
 
   -- Telescope

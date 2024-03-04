@@ -18,30 +18,6 @@ local map = {
   -- LSP
   {
     { "n" },
-    "<Space>la",
-    function()
-      vim.lsp.buf.rename()
-    end,
-    { desc = "Rename", noremap = true },
-  },
-  {
-    { "n" },
-    "<Space>lc",
-    function()
-      vim.lsp.buf.code_action()
-    end,
-    { desc = "Code Action", noremap = true },
-  },
-  {
-    { "n" },
-    "<Space>lg",
-    function()
-      vim.lsp.buf.outgoing_calls()
-    end,
-    { desc = "Outgoing Calls", noremap = true },
-  },
-  {
-    { "n" },
     "K",
     function()
       local clients = vim.lsp.get_active_clients()
