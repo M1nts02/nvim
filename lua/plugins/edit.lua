@@ -14,15 +14,24 @@ return {
 
   -- Cursor jump
   {
-    "ggandor/flit.nvim",
+    "folke/flash.nvim",
     event = { "BufRead", "BufNewFile" },
-    main = "flit",
-    keys = { "f", "F", "t", "T" },
-    opts = {
-      keys = { f = "f", F = "F", t = "t", T = "T" },
-      labeled_modes = "nv",
+    keys = {
+      {
+        "<C-f>",
+        mode = { "n", "x", "o", "v" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Jump",
+      },
     },
-    dependencies = { "ggandor/leap.nvim" },
+    opts = {
+      modes = {
+        search = { enabled = false },
+        char = { enabled = false },
+      },
+    },
   },
 
   -- TODO
