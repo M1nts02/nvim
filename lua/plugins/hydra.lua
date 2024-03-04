@@ -3,16 +3,9 @@ local M = {}
 -- DAP
 M.debug = {
   name = "DEBUG",
-  hint = [[
-    _c_: Continue     _s_: StepOver        _o_: StepOut
-    _b_: Breakpoint   _n_: StepInto
-     ^                                                     ]],
   config = {
     color = "pink",
-    invoke_on_body = false,
-    hint = {
-      border = "rounded",
-    },
+    invoke_on_body = true,
   },
   mode = "n",
   body = "<Space>d",
@@ -22,6 +15,7 @@ M.debug = {
     { "s", "<CMD>DapStepOver<CR>", { desc = "StepOver" } },
     { "n", "<CMD>DapStepInto<CR>", { desc = "StepInto" } },
     { "o", "<CMD>DapStepOut<CR>", { desc = "StepOut" } },
+    { "q", "<CMD>DapClose<CR>", { desc = "Close" } },
   },
 }
 
@@ -218,13 +212,13 @@ M.options = {
 return {
   "folke/which-key.nvim",
   dependencies = {
-  "anuvyklack/hydra.nvim",
-  keys = { "<Space>", "\\" },
-  config = function()
-    for _, v in pairs(M) do
-      local Hydra = require "hydra"
-      Hydra(v)
-    end
-  end,
-}
+    "anuvyklack/hydra.nvim",
+    keys = { "<Space>", "\\" },
+    config = function()
+      for _, v in pairs(M) do
+        local Hydra = require "hydra"
+        Hydra(v)
+      end
+    end,
+  },
 }
