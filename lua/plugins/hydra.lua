@@ -15,7 +15,7 @@ M.debug = {
     { "s", "<CMD>DapStepOver<CR>", { desc = "StepOver" } },
     { "n", "<CMD>DapStepInto<CR>", { desc = "StepInto" } },
     { "o", "<CMD>DapStepOut<CR>", { desc = "StepOut" } },
-    { "q", "<CMD>DapClose<CR>", { desc = "Close" } },
+    { "q", "<CMD>DapUIClose<CR>", { desc = "Close" } },
   },
 }
 

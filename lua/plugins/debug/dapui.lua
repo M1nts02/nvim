@@ -10,12 +10,12 @@ require("dapui").setup {
   layouts = {
     {
       elements = {
-        { id = "scopes", size = 0.25 },
+        "scopes",
         "breakpoints",
         "stacks",
         "watches",
       },
-      size = 40,
+      size = 0.3,
       position = "left",
     },
     {
@@ -30,14 +30,14 @@ require("dapui").setup {
 }
 
 -- Open dapui
-vim.api.nvim_create_user_command("DapOpen", function()
-  dapui.open()
+vim.api.nvim_create_user_command("DapUIToggle", function()
+  dapui.toggle()
 end, {
-  desc = "Open dapui",
+  desc = "Toggle dapui",
 })
 
 -- Stop dap
-vim.api.nvim_create_user_command("DapClose", function()
+vim.api.nvim_create_user_command("DapUIClose", function()
   vim.api.nvim_command "DapTerminate"
   dapui.close()
 end, {
