@@ -37,11 +37,10 @@ return {
   -- TODO
   {
     "folke/todo-comments.nvim",
-    cmd = { "TodoLocList", "TodoQuickFix", "TodoTelescope", "TodoTrouble" },
-    keys = { { "<Space>ft", "<CMD>TodoTelescope<CR>", desc = "Todo list" } },
+    cmd = { "TodoLocList", "TodoQuickFix", "TodoTrouble" },
     main = "todo-comments",
     opts = {},
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "kevinhwang91/nvim-bqf" },
   },
 
   -- Indent scope

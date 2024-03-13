@@ -1,4 +1,64 @@
 return {
+  -- Search
+  {
+    "ibhagwan/fzf-lua",
+    cmd = { "FzfLua" },
+    keys = {
+      { "<Space>f<CR>", "<CMD>FzfLua builtin<CR>", desc = "Telescope" },
+      { "<Space>ff", "<CMD>FzfLua files<CR>", desc = "File" },
+      { "<Space>fb", "<CMD>FzfLua buffers<CR>", desc = "Buffer" },
+      { "<Space>fh", "<CMD>FzfLua help_tags<CR>", desc = "Help" },
+      { "<Space>fo", "<CMD>FzfLua oldfiles<CR>", desc = "Oldfile" },
+      { "<Space>fm", "<CMD>FzfLua marks<CR>", desc = "Marks" },
+      { "<Space>/", "<CMD>FzfLua lines<CR>", desc = "Line" },
+      { "<Space>lS", "<CMD>FzfLua lsp_workspace_symbols<CR>", desc = "Symbol Workspace" },
+      { "z=", "<CMD>FzfLua spell_suggest<CR>", desc = "spell suggest" },
+    },
+    opts = {
+      winopts = {
+        height = 0.7,
+        width = 0.8,
+        preview = {
+          horizontal = "right:50%",
+          scrollbar = false,
+        },
+      },
+      fzf_colors = {
+        ["fg"] = { "fg", "CursorLine" },
+        ["bg"] = { "bg", "Normal" },
+        ["hl"] = { "fg", "Comment" },
+        ["fg+"] = { "fg", "Normal" },
+        ["bg+"] = { "bg", "CursorLine" },
+        ["hl+"] = { "fg", "Statement" },
+        ["info"] = { "fg", "PreProc" },
+        ["prompt"] = { "fg", "Conditional" },
+        ["pointer"] = { "fg", "Exception" },
+        ["marker"] = { "fg", "Keyword" },
+        ["spinner"] = { "fg", "Label" },
+        ["header"] = { "fg", "Comment" },
+        ["gutter"] = { "bg", "Normal" },
+      },
+      previewers = {
+        builtin = {
+          treesitter = { enable = false },
+          extensions = {
+            ["png"] = { "viu", "-b" },
+            ["svg"] = { "chafa", "{file}" },
+            ["jpg"] = { "viu", "-b" },
+          },
+        },
+      },
+    },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      {
+        "junegunn/fzf",
+        enabled = vim.fn.executable "fzf" ~= 1,
+        build = "./install --bin",
+      },
+    },
+  },
+
   -- Terminal
   {
     "akinsho/toggleterm.nvim",
