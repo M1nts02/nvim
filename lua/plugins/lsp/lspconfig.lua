@@ -28,6 +28,10 @@ capabilities.textDocument.foldingRange = {
 local on_attach = function(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
+
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(bufnr, true)
+  end
 end
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
@@ -53,3 +57,15 @@ for _, lsp in ipairs(lsp_servers) do
     capabilities = capabilities,
   }
 end
+
+-- Toggle LSP
+vim.api.nvim_create_user_command("LspToggle", function()
+  local clients = vim.lsp.get_active_clients()
+  if next(clients) == nil then
+    vim.cmd "LspStart"
+  else
+    vim.cmd "LspStop"
+  end
+end, {
+  desc = "Toggle LSP",
+})

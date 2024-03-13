@@ -5,12 +5,10 @@ return {
     event = { "BufRead", "BufNewFile" },
     config = function()
       require "plugins.lsp.lspconfig"
-      require "plugins.lsp.command"
     end,
   },
 
-  -- Winbar like vscode
-  --{ "Bekaboo/dropbar.nvim", version = "*" }, -- requirement neovim-0.10+
+  -- Winbar
   {
     "utilyre/barbecue.nvim",
     event = "LspAttach",
