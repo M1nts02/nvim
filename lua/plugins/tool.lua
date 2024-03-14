@@ -9,6 +9,14 @@ return {
     end,
   },
 
+  -- Color highlighting
+  {
+    "NvChad/nvim-colorizer.lua",
+    cmd = { "ColorizerAttachToBuffer", "ColorizerDetachFromBuffer", "ColorizerReloadAllBuffers", "ColorizerToggle" },
+    main = "colorizer",
+    opts = {},
+  },
+
   -- Search
   {
     "ibhagwan/fzf-lua",
