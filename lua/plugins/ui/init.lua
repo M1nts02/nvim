@@ -41,19 +41,5 @@ return {
   {
     "kevinhwang91/nvim-bqf",
     event = "QuickFixCmdPre",
-    keys = {
-      {
-        "<Space>fg",
-        function()
-          local arg = vim.fn.input "Grep: "
-          if arg == "" or arg == nil then
-            return
-          end
-          vim.cmd("vimgrep /" .. arg .. "/gj **")
-          vim.cmd "copen"
-        end,
-        desc = "Grep",
-      },
-    },
   },
 }

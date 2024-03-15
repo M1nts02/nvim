@@ -1,4 +1,31 @@
 return {
+  -- Rg
+  {
+    "duane9/nvim-rg",
+    cmd = "Rg",
+    keys = {
+      {
+        "<Space>fg",
+        function()
+          local arg = vim.fn.input "Grep: "
+
+          if arg == "" or arg == nil then
+            return
+          end
+
+          if vim.fn.executable "Rg" == 1 then
+            vim.cmd("Rg " .. arg)
+            return
+          end
+
+          vim.cmd("vimgrep /" .. arg .. "/gj **")
+          vim.cmd "copen"
+        end,
+        desc = "Grep",
+      },
+    },
+  },
+
   -- Markdown
   {
     "iamcco/markdown-preview.nvim",
@@ -31,6 +58,7 @@ return {
       { "<Space>/", "<CMD>FzfLua lines<CR>", desc = "Line" },
       { "<Space>lS", "<CMD>FzfLua lsp_workspace_symbols<CR>", desc = "Symbol Workspace" },
       { "z=", "<CMD>FzfLua spell_suggest<CR>", desc = "spell suggest" },
+      { "<A-x>", "<CMD>FzfLua commands<CR>", desc = "Commands" },
     },
     opts = {
       winopts = {
@@ -113,7 +141,8 @@ return {
     "lewis6991/gitsigns.nvim",
     cmd = { "Gitsigns" },
     keys = {
-      { "<Space>gg", "<CMD>Gitsigns<CR>", desc = "Gitsigns" },
+      { "<Space>gg", "<CMD>Gitsigns toggle_signs<CR>", desc = "Gitsigns" },
+      { "<Space>gb", "<CMD>Gitsigns toggle_current_line_blame<CR>", desc = "Gitsigns blame" },
       { "<Space>gd", "<CMD>Gitsigns diffthis<CR>", desc = "Diff" },
       { "<Space>g<Cr>", "<CMD>Gitsigns refresh<CR>", desc = "Gitsigns refresh" },
     },
