@@ -4,7 +4,6 @@
 
 * Default dark theme for non-Macos system
 * It is only tested on Macos
-* Press `\` to enable some function
 
 ## Requirements
 
