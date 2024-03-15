@@ -1,4 +1,14 @@
 return {
+  -- Float UI
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    main = "noice",
+    opts = require "plugins.ui.noice",
+    dependencies = { "MunifTanjim/nui.nvim" },
+  },
+
+
   -- Status line
   {
     "nvim-lualine/lualine.nvim",
