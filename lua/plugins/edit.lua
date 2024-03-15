@@ -2,10 +2,30 @@ local utils = require "core.utils"
 local path_join = utils.path_join
 
 return {
+  -- csv
+  {
+    "cameron-wags/rainbow_csv.nvim",
+    config = true,
+    ft = {
+      "csv",
+      "tsv",
+      "csv_semicolon",
+      "csv_whitespace",
+      "csv_pipe",
+      "rfc_csv",
+      "rfc_semicolon",
+    },
+    cmd = {
+      "RainbowDelim",
+      "RainbowDelimSimple",
+      "RainbowDelimQuoted",
+      "RainbowMultiDelim",
+    },
+  },
+
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    enabled = not vim.g.is_windows,
     event = { "BufRead", "BufNewFile" },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo", "TSUpdate" },
     build = ":TSUpdate",
