@@ -9,7 +9,7 @@ return {
     end,
     config = function()
       require "plugins.completion.cmp"
-      require "plugins.completion.command"
+      require "plugins.completion.commands"
     end,
     dependencies = {
       "hrsh7th/cmp-path", -- Support path

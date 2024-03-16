@@ -54,7 +54,7 @@ require("lazy").setup({
       vim.o.shada = shada
       pcall(vim.cmd.rshada, { bang = true })
       -- Load mapping
-      require "core.command"
+      require "core.commands"
       require "core.mapping"
     end,
   },
