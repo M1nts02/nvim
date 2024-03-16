@@ -5,9 +5,22 @@ return {
     event = "VeryLazy",
     main = "noice",
     opts = require "plugins.ui.noice",
-    dependencies = { "MunifTanjim/nui.nvim" },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      {
+        "rcarriga/nvim-notify",
+        opts = {
+          max_width = "40",
+          reader = "compact",
+          animate = false,
+          timeout = 2000,
+          fps = 5,
+          level = 1,
+          stages = "static",
+        },
+      },
+    },
   },
-
 
   -- Status line
   {
