@@ -93,11 +93,19 @@ return {
 
   -- Indent scope
   {
-    "echasnovski/mini.indentscope",
-    version = "*",
-    event = "LspAttach",
-    main = "mini.indentscope",
-    opts = {},
+    "shellRaining/hlchunk.nvim",
+    event = { "BufRead", "BufNewFile" },
+    opts = {
+      chunk = {
+        enable = true,
+        notify = false,
+        use_treesitter = false,
+        style = { { link = "LineNr" }, {link = "ErrorMsg"} },
+      },
+      indent = { enable = false },
+      line_num = { enable = false },
+      blank = { enable = false },
+    },
   },
 
   -- Comment
