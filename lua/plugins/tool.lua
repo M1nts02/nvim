@@ -49,16 +49,51 @@ return {
     "ibhagwan/fzf-lua",
     cmd = { "FzfLua" },
     keys = {
-      { "<Space>f<CR>", "<CMD>FzfLua builtin<CR>", desc = "Telescope" },
+      { "<Space>f<CR>", "<CMD>FzfLua builtin<CR>", desc = "Builtin" },
       { "<Space>ff", "<CMD>FzfLua files<CR>", desc = "File" },
-      { "<Space>fb", "<CMD>FzfLua buffers<CR>", desc = "Buffer" },
-      { "<Space>fh", "<CMD>FzfLua help_tags<CR>", desc = "Help" },
       { "<Space>fo", "<CMD>FzfLua oldfiles<CR>", desc = "Oldfile" },
       { "<Space>fm", "<CMD>FzfLua marks<CR>", desc = "Marks" },
-      { "<Space>/", "<CMD>FzfLua lines<CR>", desc = "Line" },
       { "<Space>lS", "<CMD>FzfLua lsp_workspace_symbols<CR>", desc = "Symbol Workspace" },
-      { "z=", "<CMD>FzfLua spell_suggest<CR>", desc = "spell suggest" },
-      { "<A-x>", "<CMD>FzfLua commands<CR>", desc = "Commands" },
+      { "<Space>f/", "<CMD>FzfLua lines<CR>", desc = "Buffers line" },
+      { "<Space>/", "<CMD>FzfLua blines<CR>", desc = "Line" },
+      {
+        "<Space>fh",
+        function()
+          require("fzf-lua").help_tags {
+            winopts = {
+              height = 0.5,
+              width = 0.7,
+              preview = { hidden = "hidden" },
+            },
+          }
+        end,
+        desc = "Help",
+      },
+      {
+        "z=",
+        function()
+          require("fzf-lua").spell_suggest {
+            winopts = {
+              height = 0.6,
+              width = 0.4,
+            },
+          }
+        end,
+        desc = "spell suggest",
+      },
+      {
+        "<A-x>",
+        function()
+          require("fzf-lua").commands {
+            winopts = {
+              height = 0.5,
+              width = 0.5,
+              preview = { hidden = "hidden" },
+            },
+          }
+        end,
+        desc = "Commands",
+      },
     },
     opts = {
       winopts = {
