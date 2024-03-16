@@ -69,9 +69,17 @@ return {
         "<C-f>",
         mode = { "n", "x", "o", "v" },
         function()
-          require("flash").jump()
+          require("flash").jump { search = { forward = true, wrap = false, multi_window = false } }
         end,
-        desc = "Jump",
+        desc = "Jump forward",
+      },
+      {
+        "<C-b>",
+        mode = { "n", "x", "o", "v" },
+        function()
+          require("flash").jump { search = { forward = false, wrap = false, multi_window = false } }
+        end,
+        desc = "Jump backward",
       },
     },
     opts = {
@@ -100,7 +108,7 @@ return {
         enable = true,
         notify = false,
         use_treesitter = false,
-        style = { { link = "LineNr" }, {link = "ErrorMsg"} },
+        style = { { link = "LineNr" }, { link = "ErrorMsg" } },
       },
       indent = { enable = false },
       line_num = { enable = false },
