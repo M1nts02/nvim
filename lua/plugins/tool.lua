@@ -100,6 +100,12 @@ return {
         height = 0.7,
         width = 0.8,
         preview = {
+          default = function()
+            if vim.fn.executable "bat" == 1 then
+              return "bat"
+            end
+            return "builtin"
+          end,
           horizontal = "right:50%",
           scrollbar = false,
         },
