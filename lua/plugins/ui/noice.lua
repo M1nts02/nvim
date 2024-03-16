@@ -7,7 +7,7 @@ return {
   messages = { enabled = false },
   popupmenu = {
     enabled = true,
-    backend = "nui",
+    backend = "cmp",
     relative = "editor",
     position = { row = 8, col = "50%" },
     size = { width = "71%", height = 10 },

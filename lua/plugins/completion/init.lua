@@ -28,4 +28,46 @@ return {
       },
     },
   },
+
+  -- Command line
+  {
+    "hrsh7th/cmp-cmdline",
+    keys = { ":", "/", "?" },
+    opts = function()
+      local cmp = require "cmp"
+      return {
+        {
+          type = "/",
+          completion = { keyword_length = 1 },
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = { { name = "buffer" } },
+        },
+        {
+          type = ":",
+          completion = { keyword_length = 1 },
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = cmp.config.sources(
+            { { name = "path" } },
+            { { name = "cmdline", option = { ignore_cmds = { "Man", "!" } } } }
+          ),
+        },
+        {
+          type = "@",
+          completion = { keyword_length = 1 },
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = cmp.config.sources {
+            { name = "path" },
+            { { name = "cmdline", option = { ignore_cmds = { "Man", "!" } } } },
+          },
+        },
+      }
+    end,
+    config = function(_, opts)
+      local cmp = require "cmp"
+      vim.tbl_map(function(val)
+        cmp.setup.cmdline(val.type, val)
+      end, opts)
+    end,
+    dependencies = { "hrsh7th/nvim-cmp", "hrsh7th/cmp-buffer" },
+  },
 }
