@@ -13,6 +13,7 @@ return {
     dependencies = {
       { -- Toggle theme
         "M1nts02/toggle-theme.nvim",
+        keys = { {"<Space>tt", "<CMD>ToggleTheme<CR>", desc = "Theme"} },
         opts = {
           following_system = vim.g.following_system,
           light_mode = function()

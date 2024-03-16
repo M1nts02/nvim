@@ -69,6 +69,14 @@ local rg = {
 
   -- Color
   ["<Space>p"] = { name = "Preview+" },
+
+  -- Toggle
+  ["<Space>t"] = {
+    name = "Toggle+",
+    ["n"] = { "<CMD>NumberToggle<CR>", "Number" },
+    ["r"] = { "<CMD>RelativenumberToggle<CR>", "Relativenumber" },
+    ["l"] = { "<CMD>StatuslineToggle<CR>", "Statusline" },
+  },
 }
 
 return {
