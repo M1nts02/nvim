@@ -16,26 +16,26 @@ return {
       "DapTerminate",
       "DapToggleBreakpoint",
       "DapToggleRepl",
-      "DapOpen",
-      "DapClose",
+      "DapUIToggle",
     },
     config = function()
       require "plugins.debug.dap"
     end,
+    dependencies = {
+      { -- DAP UI
+        "rcarriga/nvim-dap-ui",
+        cmd = {},
+        version = "*",
+        init = function()
+          -- Open dapui
+          vim.api.nvim_create_user_command("DapUIToggle", function()
+            require("dapui").toggle()
+          end, { desc = "Toggle dapui" })
+        end,
+        config = function()
+          require "plugins.debug.dapui"
+        end,
+      },
+    },
   },
-  { -- DAP UI
-    "rcarriga/nvim-dap-ui",
-    version = "*",
-    init = function()
-      -- Open dapui
-      vim.api.nvim_create_user_command("DapUIToggle", function()
-        require("dapui").toggle()
-      end, {desc = "Toggle dapui",
-      })
-    end,
-    config = function()
-      require "plugins.debug.dapui"
-    end,
-  },
-  dependencies = { "mfussenegger/nvim-dap" },
 }
