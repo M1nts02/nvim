@@ -1,4 +1,11 @@
 return {
+  -- Session
+  {
+    "nvimdev/dbsession.nvim",
+    cmd = { "SessionSave", "SessionDelete", "SessionLoad" },
+    opts = {},
+  },
+
   -- Rg
   {
     "duane9/nvim-rg",
