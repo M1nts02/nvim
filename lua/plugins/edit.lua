@@ -2,6 +2,13 @@ local utils = require "core.utils"
 local path_join = utils.path_join
 
 return {
+  -- Search highlighting
+  {
+    "nvimdev/hlsearch.nvim",
+    event = { "BufRead", "BufNewFile" },
+    opts = {},
+  },
+
   -- csv
   {
     "cameron-wags/rainbow_csv.nvim",
