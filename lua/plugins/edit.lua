@@ -2,6 +2,12 @@ local utils = require "core.utils"
 local path_join = utils.path_join
 
 return {
+  -- ron
+  {
+    "ron-rs/ron.vim",
+    ft = { "ron" },
+  },
+
   -- Search highlighting
   {
     "nvimdev/hlsearch.nvim",
