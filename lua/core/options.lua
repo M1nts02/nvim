@@ -56,7 +56,6 @@ opt.fillchars = { eob = " " }
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 g.mapleader = "\\"
-g.zig_fmt_autosave = false
 
 cmd "unmenu PopUp"
 cmd "filetype indent off"
