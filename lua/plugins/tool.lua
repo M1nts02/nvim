@@ -1,4 +1,12 @@
 return {
+  -- Task system
+  {
+    "stevearc/overseer.nvim",
+    version = "*",
+    cmd = { "OverseerRun", "OverseerToggle" },
+    opts = {},
+  },
+
   -- Session
   {
     "nvimdev/dbsession.nvim",
