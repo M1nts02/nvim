@@ -5,6 +5,7 @@ local config = vim.fn.stdpath "config"
 -- default global value
 vim.g.transparent = false
 vim.g.following_system = false
+vim.g.start_only = false
 _G.lsp_servers = {}
 
 -- Get path of custom file

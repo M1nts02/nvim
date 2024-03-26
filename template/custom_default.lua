@@ -2,6 +2,7 @@
 
 -- vim.g.transparent = true
 -- vim.g.following_system = true
+-- vim.g.start_only = true
 -- vim.g.python3_host_prog = "python3"
 
 -- vim.o.shell = "/opt/homebrew/bin/nu"
